@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffd1e4">
+  <meta name="description" content="A little digital bouquet made especially for you.">
+  <title>A Little Bouquet ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+
+  <div class="opening-screen" id="openingScreen">
+    <div class="opening-card">
+      <div class="mini-sparkles" aria-hidden="true">✦　✧　♡　✧　✦</div>
+      <p class="eyebrow">a little surprise for you</p>
+      <h1>Something<br><span>just for you.</span></h1>
+      <p class="opening-copy">
+        I wanted to give you something small, soft, and pretty.
+        So I made you a bouquet that never fades.
+      </p>
+
+      <div class="wrapped-bouquet" id="wrappedBouquet" aria-hidden="true">
+        <div class="wrap-paper"></div>
+        <div class="wrap-flap"></div>
+        <div class="wrap-ribbon wrap-ribbon-left"></div>
+        <div class="wrap-ribbon wrap-ribbon-right"></div>
+        <div class="wrap-knot"></div>
+        <div class="wrap-heart">♡</div>
+      </div>
+
+      <button class="unwrap-btn" id="unwrapBtn" type="button">
+        <span>untie the ribbon</span>
+        <span aria-hidden="true">🎀</span>
+      </button>
+      <p class="opening-hint">there's a little bouquet waiting inside ♡</p>
+    </div>
+  </div>
+
+  <main class="page" id="mainContent">
+    <header class="hero">
+      <p class="eyebrow">for <span id="heroName">her name</span>, with love ♡</p>
+      <h1>A Bouquet<br><span>For You.</span></h1>
+      <p class="intro" id="introMessage">
+        A tiny garden made of pixels, pinks, and a few flowers that reminded me of you.
+      </p>
+
+      <button class="open-btn" id="bloomBtn" type="button">
+        <span>make it bloom</span>
+        <span aria-hidden="true">♡</span>
+      </button>
+    </header>
+
+    <section class="bouquet-wrap" aria-label="Digital flower bouquet">
+      <div class="sparkles" aria-hidden="true"></div>
+
+      <div class="bouquet" id="bouquet">
+        <div class="paper" aria-hidden="true"></div>
+
+        <div class="stem stem-t1"></div>
+        <div class="stem stem-t2"></div>
+        <div class="stem stem-t3"></div>
+        <div class="stem stem-t4"></div>
+        <div class="stem stem-r1"></div>
+        <div class="stem stem-r2"></div>
+        <div class="stem stem-r3"></div>
+        <div class="stem stem-l1"></div>
+        <div class="stem stem-l2"></div>
+        <div class="stem stem-l3"></div>
+
+        <div class="leaf leaf-1"></div>
+        <div class="leaf leaf-2"></div>
+        <div class="leaf leaf-3"></div>
+        <div class="leaf leaf-4"></div>
+        <div class="leaf leaf-5"></div>
+        <div class="leaf leaf-6"></div>
+
+        <!-- Tulips -->
+        <button class="flower tulip tulip-1" data-flower="Tulip" data-meaning="A little reminder of warmth, happiness, and the beautiful moments that deserve to stay." type="button" aria-label="Pink tulip">
+          <span class="tulip-cup"></span><span class="tulip-petal t-left"></span>
+          <span class="tulip-petal t-center"></span><span class="tulip-petal t-right"></span>
+        </button>
+        <button class="flower tulip tulip-2" data-flower="Tulip" data-meaning="For the cheerful energy you bring into ordinary moments without even trying." type="button" aria-label="Rose pink tulip">
+          <span class="tulip-cup"></span><span class="tulip-petal t-left"></span>
+          <span class="tulip-petal t-center"></span><span class="tulip-petal t-right"></span>
+        </button>
+        <button class="flower tulip tulip-3" data-flower="Tulip" data-meaning="A soft little bloom for all the memories that still make me smile." type="button" aria-label="Blush tulip">
+          <span class="tulip-cup"></span><span class="tulip-petal t-left"></span>
+          <span class="tulip-petal t-center"></span><span class="tulip-petal t-right"></span>
+        </button>
+        <button class="flower tulip tulip-4" data-flower="Tulip" data-meaning="Something bright for someone who made some days feel a little brighter." type="button" aria-label="Pink tulip">
+          <span class="tulip-cup"></span><span class="tulip-petal t-left"></span>
+          <span class="tulip-petal t-center"></span><span class="tulip-petal t-right"></span>
+        </button>
+
+        <!-- Roses -->
+        <button class="flower rose rose-1" data-flower="Rose" data-meaning="For the moments I quietly appreciated more than I ever managed to say." type="button" aria-label="Pink rose">
+          <span class="rose-petal rp-1"></span><span class="rose-petal rp-2"></span>
+          <span class="rose-petal rp-3"></span><span class="rose-petal rp-4"></span>
+          <span class="rose-petal rp-5"></span><span class="rose-center"></span>
+        </button>
+        <button class="flower rose rose-2" data-flower="Rose" data-meaning="A rose because some people leave a gentle mark on your memories just by being themselves." type="button" aria-label="Blush rose">
+          <span class="rose-petal rp-1"></span><span class="rose-petal rp-2"></span>
+          <span class="rose-petal rp-3"></span><span class="rose-petal rp-4"></span>
+          <span class="rose-petal rp-5"></span><span class="rose-center"></span>
+        </button>
+        <button class="flower rose rose-3" data-flower="Rose" data-meaning="For something beautiful that never needed to be loud to matter." type="button" aria-label="Pink rose">
+          <span class="rose-petal rp-1"></span><span class="rose-petal rp-2"></span>
+          <span class="rose-petal rp-3"></span><span class="rose-petal rp-4"></span>
+          <span class="rose-petal rp-5"></span><span class="rose-center"></span>
+        </button>
+
+        <!-- Lilies -->
+        <button class="flower lily lily-1" data-flower="Lily" data-meaning="For softness, sincerity, and the little things about you I will always be grateful to know." type="button" aria-label="Pink lily">
+          <span class="lily-petal lp-1"></span><span class="lily-petal lp-2"></span>
+          <span class="lily-petal lp-3"></span><span class="lily-petal lp-4"></span>
+          <span class="lily-petal lp-5"></span><span class="lily-petal lp-6"></span>
+          <span class="lily-center"></span>
+        </button>
+        <button class="flower lily lily-2" data-flower="Lily" data-meaning="A calm little bloom for the comfort of simply knowing you." type="button" aria-label="Pink lily">
+          <span class="lily-petal lp-1"></span><span class="lily-petal lp-2"></span>
+          <span class="lily-petal lp-3"></span><span class="lily-petal lp-4"></span>
+          <span class="lily-petal lp-5"></span><span class="lily-petal lp-6"></span>
+          <span class="lily-center"></span>
+        </button>
+        <button class="flower lily lily-3" data-flower="Lily" data-meaning="A tiny thank-you for every good memory, laugh, and unexpected little moment." type="button" aria-label="Blush lily">
+          <span class="lily-petal lp-1"></span><span class="lily-petal lp-2"></span>
+          <span class="lily-petal lp-3"></span><span class="lily-petal lp-4"></span>
+          <span class="lily-petal lp-5"></span><span class="lily-petal lp-6"></span>
+          <span class="lily-center"></span>
+        </button>
+
+        <div class="ribbon" aria-hidden="true">
+          <span></span><span></span>
+        </div>
+        <div class="bouquet-glow" aria-hidden="true"></div>
+      </div>
+
+      <p class="tip">tap a flower ♡</p>
+    </section>
+
+    <section class="message-card">
+      <p class="note-kicker">a note from <span id="senderName">your name</span></p>
+      <p class="personal-message" id="personalMessage">
+        Dear her name,<br><br>
+        I know your heart is somewhere else, and I respect that. I just wanted
+        to give you something gentle — a little collection of pretty flowers and
+        good memories, with no pressure attached.<br><br>
+        I am glad I got to know you. Thank you for the laughs, the little moments,
+        and all the memories that made their way into my life.<br><br>
+        You do not have to give me anything back. I just hope this makes you smile.
+      </p>
+      <p class="signature">— <span id="signatureName">your name</span> ♡</p>
+    </section>
+
+    <section class="note-card" id="noteCard" aria-live="polite">
+      <p class="note-kicker" id="flowerName">little flower note</p>
+      <p class="note-text" id="noteText">Every flower gets its own tiny meaning.</p>
+      <button class="reset-btn" id="resetBtn" type="button">close note</button>
+    </section>
+
+    <footer>
+      <p>made with a little HTML, CSS, JavaScript, and a lot of pink ♡</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

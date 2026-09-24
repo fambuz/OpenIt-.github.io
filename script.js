@@ -1,0 +1,103 @@
+/* =========================
+   PERSONALIZATION — EDIT HERE
+   ========================= */
+const CRUSH_NAME = "her name";
+const YOUR_NAME = "your name";
+
+const PERSONAL_MESSAGE = `Dear ${CRUSH_NAME},
+
+I know your heart is somewhere else, and I respect that. I just wanted to give you something gentle — a little collection of pretty flowers and good memories, with no pressure attached.
+
+I am glad I got to know you. Thank you for the laughs, the little moments, and all the memories that made their way into my life.
+
+You do not have to give me anything back. I just hope this makes you smile.`;
+
+const INTRO_MESSAGE =
+  `A tiny garden made of pixels, pinks, and a few flowers that reminded me of you.`;
+
+/* ========================= */
+
+const openingScreen = document.getElementById("openingScreen");
+const unwrapBtn = document.getElementById("unwrapBtn");
+const bloomBtn = document.getElementById("bloomBtn");
+const bouquet = document.getElementById("bouquet");
+const noteCard = document.getElementById("noteCard");
+const noteText = document.getElementById("noteText");
+const flowerName = document.getElementById("flowerName");
+const resetBtn = document.getElementById("resetBtn");
+const petals = document.querySelector(".petals");
+const flowers = document.querySelectorAll(".flower");
+
+document.getElementById("heroName").textContent = CRUSH_NAME;
+document.getElementById("senderName").textContent = YOUR_NAME;
+document.getElementById("signatureName").textContent = YOUR_NAME;
+document.getElementById("introMessage").textContent = INTRO_MESSAGE;
+
+document.getElementById("personalMessage").innerHTML =
+  PERSONAL_MESSAGE.replace(/\n/g, "<br>");
+
+function makePetals(count = 24) {
+  petals.innerHTML = "";
+  for (let i = 0; i < count; i++) {
+    const petal = document.createElement("span");
+    petal.className = "petal-fall";
+    const size = 8 + Math.random() * 10;
+    const left = Math.random() * 100;
+    const duration = 4.5 + Math.random() * 4;
+    const delay = Math.random() * 1.8;
+    const drift = `${-80 + Math.random() * 160}px`;
+
+    petal.style.left = `${left}vw`;
+    petal.style.width = `${size}px`;
+    petal.style.height = `${size * 1.35}px`;
+    petal.style.animationDuration = `${duration}s`;
+    petal.style.animationDelay = `${delay}s`;
+    petal.style.setProperty("--drift", drift);
+    petals.appendChild(petal);
+
+    petal.addEventListener("animationend", () => petal.remove());
+  }
+}
+
+unwrapBtn.addEventListener("click", () => {
+  openingScreen.classList.add("opening");
+  unwrapBtn.disabled = true;
+  unwrapBtn.querySelector("span").textContent = "opening your bouquet…";
+
+  setTimeout(() => {
+    openingScreen.classList.add("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    setTimeout(() => {
+      bouquet.classList.add("ready", "bloom");
+      makePetals();
+      bloomBtn.querySelector("span").textContent = "bloomed for you";
+    }, 350);
+  }, 950);
+});
+
+bloomBtn.addEventListener("click", () => {
+  bouquet.classList.remove("ready", "bloom");
+  void bouquet.offsetWidth;
+  bouquet.classList.add("ready", "bloom");
+  makePetals();
+  bloomBtn.querySelector("span").textContent = "bloomed for you";
+});
+
+flowers.forEach((flower) => {
+  flower.addEventListener("click", () => {
+    flowerName.textContent = `${flower.dataset.flower} ♡`;
+    noteText.textContent = flower.dataset.meaning || "A tiny flower note, just for you. ♡";
+    noteCard.classList.add("show");
+
+    flowers.forEach((item) => item.classList.remove("selected"));
+    flower.classList.add("selected");
+
+    noteCard.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+});
+
+resetBtn.addEventListener("click", () => {
+  noteCard.classList.remove("show");
+  flowers.forEach((flower) => flower.classList.remove("selected"));
+});
