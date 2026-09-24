@@ -1,19 +1,16 @@
 /* =========================
    PERSONALIZATION — EDIT HERE
    ========================= */
-const CRUSH_NAME = "her name";
-const YOUR_NAME = "your name";
+const CRUSH_NAME = "ADRIANA/NANA";
+const YOUR_NAME = "Ammeer/Meer";
 
 const PERSONAL_MESSAGE = `Dear ${CRUSH_NAME},
 
-I know your heart is somewhere else, and I respect that. I just wanted to give you something gentle — a little collection of pretty flowers and good memories, with no pressure attached.
-
-I am glad I got to know you. Thank you for the laughs, the little moments, and all the memories that made their way into my life.
-
-You do not have to give me anything back. I just hope this makes you smile.`;
+Dont be sad over those bad people that bullies you, mock your cosplays etc their just jealous of you. You are an incredible woman, kind, caring, pretty and with a pure soul. Just remember ill always be
+on the sidelines cheering you on!!! like a fan cheering on an idol :3, Anyway i made this cause i felt generous.. or am I? who knows (ゝω・´★), ill let you figure that one out on yourself ;p.`;
 
 const INTRO_MESSAGE =
-  `A tiny garden made of pixels, pinks, and a few flowers that reminded me of you.`;
+  `A tiny garden made of pixels, pinks, and a few flowers that represents you to me.`;
 
 /* ========================= */
 
